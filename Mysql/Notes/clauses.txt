@@ -1,0 +1,72 @@
+     ii. order by: it is used to sort the result of a query in ascending or descending order. Default order is ascending.
+ write a query to print all teachers in staff table whose age is greater than 30 and arrange it according to teachers name alphabetical order
+  select * from staff
+where age>30
+order by tname
+
+Print all teachers according to their salries in descending order
+select * from staff
+order by salary desc;
+
+iii. limit: it is used to print or display only certain number of rows
+WAQ to display name and age and salary of lowest salried employee
+select tname,age,salary
+from staff
+order by salary asc
+limit 1;
+
+iv. offset : it is used to display the output by skipping certain number of rows
+WAQ to display all names, ages of staff except youngest staff
+select * from staff
+order by age asc
+limit 5
+offset 1;
+
+
+WAQ to display name,age, salary of third highest salaried staff
+select tname,salary
+from staff
+order by salary desc
+limit 1
+offset 2;
+
+WAQ to display name,age of second oldest staff
+select tname,age
+from staff
+order by age desc;
+limit 1
+offset 1
+
+v. Group By :  The Group by clause is used to group the rows based on one or more columns. it is often used with agrregate functions like count(),sum(),avg() etc..,
+     Agreegate Functions: These functions are used to perform mathematical operation on group of rows
+      i. count(): count is used to count the number of rows in each group
+       WAQ to print number of males and females in staff table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,94 @@
+why do we need database?
+we need database to store,scale and analyze the data.
+what is Database?
+Database is a storage unit for certain data. Before the Databases, FMS(file manage system) used to store the data
+Drawbacks of FMS: File management systems are costly, redundant, need physical space, less secure, querying is difficult
+
+  Concepts in Databases:
+    i. Data : The information stored in database such as text, images, videos, numbers etc..,
+   ii. DBMS : it is a software that manages the databases by providing tools for creating, updating, deleting or querying the data in databases.
+  iii. schema:  it is the structure of the database including the relationships between different entities
+  iv. Query : A request to retrieve or modify the data in database
+
+Types of Databases: Databases are divided into different types based on the way it stores the data
+   i. Relational Databases:  These Databases stores the data in the form of tables and maintains well defined relations between the tables.  Eg: mySQL, oracle,MSSQL server,postgreSQL,SQL Lite 
+
+  ii. Non- Relational Databases : These Databases are designed to handle large amounts of data which is unstructured or semi structured . Eg: MongoDB, cassandra, Redis
+
+  The above databases also named as SQL and NoSQL Databases
+   SQL is the language used by RDBMS to perform operations on Databases.(structured Query Language)
+                SQL Databases                                                       NoSQL Databases
+
+   SQL databases are designed for structured data              NoSQL databases are designed for
+   with Predefined schema                                                   handling unstructured or semi 
+                                                                                             structured data with flexible schema
+    SQL databases use SQL for querying the DATA            NoSQL databases uses different QL 
+                                                                                             such as mongoDB Query language
+    user management systems, booking mangement             social media, ecommerce etc.., uses NoSQL
+    systems etc.., uses SQL
+
+
+Difference between SQL and MySQL ?
+       SQL is the language used by RDBMS such as MySQL to perform database operations. SQL is a Query Language and MySql is DBMS
+
+
+MYSQL Introduction:  MySQL is an open source relational database management sytsem that uses SQL to manage and manipulate data in Databases. MySQL is known for its reliability,performance, scalability and easy of use
+           ---> open source
+           --->High Performance
+           --> Scalable
+           ---> Secure
+
+uses : Ecommerce , CMS, blogs etc..,
+How to download and Install MySQL?
+   i. goto website https://www.mysql.com/downloads/
+  ii. click "mySQL community(GPL) downloads"
+   iii. select "mySQL installer for windows" --> select second "download"
+
+It will install mySQL community Server, mySQL workbench, mySQL shell
+mySQL shells : it is CLI for mySQL
+workbench: it is the GUI tool for mySQL
+
+
+
+MySQL commands :
+To create database, we can use commands 
+     create database database_name
+Delete the Database:
+    drop database database_name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

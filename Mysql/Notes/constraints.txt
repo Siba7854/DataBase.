@@ -1,0 +1,19 @@
+Tables: In SQL databases or RDBMS, data is stored in the form of tables. Tables contains the data in the form of rows and columns. Rows are also called records. columns are also called fields or attributes. 
+Each Field contains a specific datatype to define the type of data it holds
+   create table syntax:
+          create table table_name(column_name datatype constraint, column2 datatype constraint.......);
+
+constraints: constraints are the rules that are applied to the data to ensure data integrity and consistency. They help to prevent inconsistent or invalid data from being inserted.
+   i. PRIMARY KEY: it is the column that identify the whole record uniquely. A primary key should not be null and must be unique. Every other column should depend on primary key.
+        eid    ename     eAdhaar    ephno
+  ii. Foreign Key : It references the primary key of another table. Ensures relation between  tables 
+ iii. unique: it ensures that all values in that column are unique
+  iv. not null: it ensures all values in that column must be filled(required)
+  v. check : ensures that all values in specific column satisfy a condition
+  vi. default: provides a default value for a column when no value is specified
+  vii. auto_increment : it automatically increases the previous value by one if value is not specifies
+
+
+
+
+

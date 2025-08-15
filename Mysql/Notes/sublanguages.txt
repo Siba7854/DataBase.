@@ -1,0 +1,114 @@
+MySQL Sub languages:
+   MySQL also like other RDBMS, uses SQL which is divided as several sub languages based on functionality
+  i. DDL(Data Definition language)
+ ii. DML(Data Manipulation Language)
+iii. DQL(Data Query Language)
+iv.DCL(Data Control Language)
+v.TCL(Transaction Control language)
+
+   i. DDL : These command are used to define a database,table,view etc., .They provide structure & Definition
+    Eg:create, drop, truncate, alter, rename
+  ii. DML : These commands are used to manipulate the data
+      Eg: Insert,Delete,Update 
+ iii. DQL : These commands are used to retrive the data using Queries
+     Eg:  select
+iv. DCL : These commands are used to control the data
+     Eg:GRANT,REVOKE
+v.  TCL: These commands are used to control the transactions
+     Eg: commit, rollback,savepoint 
+
+DataTypes In MySQL:
+    MySQL supports  various data types to store different kinds of data
+    INT: it is used to store integer values (we can also use tinyInt,smallInt,bigInt)
+    Decimal(M,D) -- it is used to store decimal values where M is the maximum total digits and D is the maximum digits after decimal
+      eg: decimal(5,2) ---> 43.94
+   varchar  -- it is used to store alphanumeric values(strings) with variable length
+      varchar(10) -- a,a476,prasad
+  char(n) -- it is used to store alphanumeric values(strings) with fixed length
+     char(3) -- god, don,223
+   text -- it is used for larger texts such as articles , paragraphs etc..,
+  date -- it is used to enter the date in YYYY-MM-DD format
+  time -- it is used to store the time in HH:MM:SS format
+   we can also used combined one 'datetime' and alone 'year' datatypes)
+  Boolean -- it is used to store true or false.
+
+what is the difference between char and varchar?
+  char(n) -- uses strings of exact n characters in length  
+      eg: char(4) --john, raj3, a@#p
+  varchar(n) -- uses strings of maximum n characters in length
+      eg: varchar(4) -- john, god, ox, p
+
+Database Design in MySQL: 
+    Every Database need to be designed well structured with tables and relations among them. basic principles in db design are
+   Data Integrity: Aviod redundancy
+   Security: proper access controls
+   Performance: optimise the databases
+ and we follow basic Normalization
+   1NF(first Normal Forms) : Each column should contain atomic values, no repeating groups
+   eg:  before 1NF:    
+                           sno   name             address
+                            1     PRASAD        HYD,TS,India
+                            2      John               warangal,TS,India
+
+        after 1NF
+                          sno      name          city        state    country
+                           1       PRASAD    HYD     TS        India
+                           2        John            warangal TS       India
+
+    2NF:  it should meet 1NF  and no dependency between non key columns. All columns should depend primary key
+     eg:  sid   sname    cid    cname   staff_name
+             1     john       101   DB     PRASAD
+             2     jessica    103   react   PRASAD
+
+            sid   sname    cid                 cid   cname
+             1     john       101                101   DB
+             2     jessica    103                103  raect
+   
+  3NF : it should meet 2 NF and No transitive dependency (no non key column should dependent on other non key column
+      eg:   cid      cname    staff name       staff number
+              101     DB            PRASAD      46546546
+              102     react           John               2323232
+
+             cid      cname   sid               sid     staff name       staff number
+              101     DB       125               125   PRASAD      46546546
+              102     react      126              126    John               2323232
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
