@@ -1,0 +1,19 @@
+MYSQL
+=======
+   Introduction, SQL vs NoSQL
+   MYSQL Intro, Installation
+   Sub languages, Datatypes
+   constraints, tables,databases
+   DDL commands(CREATE,ALTER - ADD, DROP, MODIFY,CHANGE,
+   DROP,TRUNCATE, RENAME)
+   DML commmands(INSERT,UPDATE,DELETE - WHERE)
+   DQL COMMANDS( SELECT)
+   CLAUSES(WHERE,ORDER BY, LIMIT,OFFSET,GROUP BY, HAVING)
+   OPERATORS(ARITHEMATIC,LOGICAL, RELATIONAL, STRING - LIKE, IN,NOT IN, BETWEEN, NOT BETWEEN ETC..,)
+   JOINS
+   SUB QUERIES
+   INDEXES, VIEWS,STORED PROCEDURES, FUNCTIONS
+   TRIGGERS
+   DCL, TCL, 
+   ACID, normalization;
+   PROJECT  (Data Analaysis and Visualization)

@@ -1,0 +1,63 @@
+Indexes: index is used to find the value or row easily. it is used to retieve large amount of data easily. it is a data structure that improves the speed of data retrival
+   create index index_name on tablename(columnname)
+
+   drop index index_name on tablename
+
+   create index staff_name ON staff(tname);
+
+drop index staff_name on staff
+
+Trigger:  A trigger is a set of actions that are automatically executed in response to some events . we can use before, after triggers
+
+create trigger trigger_name after insert on tablename
+for each row
+     set new_value= updated value
+
+eg:  create trigger delete_payment after delete on  staff
+for each row
+  begin
+      delete from payments where id = staff.id
+  end
+
+views: views are the temporary tables created from query results
+create view viewname as 
+query
+
+drop view viewname
+
+Stored Procedures: A stored Procedure is a set of SQL statements that can be executed repeatedly. it improves security, performance and code reusability
+
+create Procedure Procedurename(IN parameters)
+begin
+   query
+end
+
+call Procedurename(parameters)
+delimiter //
+create procedure getByName
+(in n varchar(20),)
+begin
+  select *
+  from staff
+  where tname=n;
+end //
+
+call getByName("Raju");
+
+functions: functions are also used for reusability but function must return a value. usually functions are used for calculations
+
+create function functionnae(parameters) returns datatype
+ begin
+    query
+  return value;
+ end
+
+ select functionname //calling
+
+
+ 
+
+
+
+
+

@@ -1,0 +1,9 @@
+-- try  these queries in w3school sql editor
+1. query to retrieve all customers details whose second letter is 'a'
+2. query to retrieve all customers who are from berlin or london
+3.list out the suppliers countrywise
+4. list the top 3 highest priced products 
+5. list the product name along with supplier name
+6. list out categories along with number of products in each
+7. list the customers_name, employee_name and supplier_name based on orders table
+8. list the product names along with its quantity available in decreasing order

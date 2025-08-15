@@ -1,0 +1,48 @@
+DDL (Data Defiinition Language): These commands are used to define the data or structure.
+   i. create: create is used to create databases or tables or views or functions or stored procedures etc..,
+        create database databaseName;
+        create table tableName(colname datatype constraint, col2 datatype constraint .......)
+   To see dbs  , you can use
+        show dbs; or show databases;
+
+  ii. Alter : The Alter command is used to modify the structure of an existing table
+     add a column:
+           Alter table table_name add column column_name dtaatype constraint position;
+     if position is not mentioned, column will be at last added
+     position -- first -- adds to the first column
+     position -- after column name -- adds after specific column
+    Modify a column: 
+            Alter table tablename modify column column_name new_datatype 
+            new_constraint new_position;
+    Delete a column
+            Alter table tablename drop column column_name;
+  iii. DROP : The DROP command is used delete a database or table entirely
+          drop table table_name or drop database database name
+   iv. Truncate : The Truncate command is used to delete all rows of a table 
+           truncate table tablename
+   v.  rename : The rename command is used to rename the table
+          rename table tablename to newtable name
+     if you want to rename column , you can use alter with change
+
+      Alter table table_name change column oldcol-name new-col-name dattype constraint position;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

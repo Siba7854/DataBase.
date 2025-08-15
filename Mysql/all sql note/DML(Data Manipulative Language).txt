@@ -1,0 +1,33 @@
+DML(Data Manipulative Language): These commands are used to manipulate the data i.e., insert,update or delete the data in table.
+   Insert a row into table:  The INSERT  command is used to add new data to tables
+   INSERT INTO table_name VALUES (value1,value2...)
+ The values should follow same order as columns
+To Insert Multiple rows mention data separated by comma
+   INSERT INTO table_name VALUES (value1,value2...),(value1,value2...),(value1,value2...)....
+To Insert data into specific columns, we can use
+  INSERT INTO tables_name (col1,col2....) VALUES (value1,value2....)
+
+UPDATE : UPDATE is used to modify or change the existing data in a table
+   update table_name
+   set col1=value1,col2=value2.....
+   where condition
+without where, update updates the all rows
+
+DELETE : DELETE is used to delete the entire row based on condition
+     DELETE FROM table_name where condition;
+
+
+By default, workbench have auto_safe_updates as true
+
+
+
+
+
+
+
+
+
+
+
+
+

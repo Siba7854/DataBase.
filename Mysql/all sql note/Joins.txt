@@ -1,0 +1,154 @@
+Joins: Joins are used to combine multiple tables such that the result of the query retrieved from both the tables. There are different types of Joins
+   i. inner Join
+   ii. Left Join
+   iii. right Join
+   iv. Full Outer Join
+   v. cross Join
+   vi. Self Join
+
+i. Inner Join : Inner Join is used to retrieve common data between the tables
+
+select t1.columnName,t2.columnName
+from table1 as t1
+inner Join
+table2 as t2
+ON condition
+
+
+
+select Customers.first_name,Customers.last_name,Shippings.status
+from Customers
+inner Join
+Shippings
+ON Customers.customer_id=Shippings.customer
+
+ii. left JOIN :  left join is used to retieve left table complete results along with common data
+select t1.columnName,t2.columnName
+from table1 as t1
+left Join
+table2 as t2
+ON condition
+
+select t1.tname, t2.class_name
+from staff as t1
+left join
+classes as t2
+on t1.tid=t2.classTeacherId
+
+Right Join:   Right Join is used to retrieve the data which is completely from right table and common data from left table
+
+select t1.columnName,t2.columnName
+from table1 as t1
+right Join
+table2 as t2
+ON condition
+
+Full Outer Join: It is union of both tables where result is all from left table and all from right table
+In MYSQL, Full outer Join is not directly Possible. Instead we can combine left join and right join using "union" command
+
+
+tas1: print cutomer names along with no of items they bought
+
+select t1.first_name,t1.last_name,count(t2.item)
+from Customers as t1
+left join
+Orders as t2
+ON t1.customer_id= t2.customer_id
+group by t2.item
+
+
+cross join: A cross Join returns the cartesian product of two tables with each row of one table combined with each row of other table
+eg: we have two tables
+id    color
+1     red
+2     blue
+3     green
+
+id   shape
+1    round
+2    square
+3    triangle
+
+select t1.color, t2.shape
+from Colors as t1
+cross join Shapes as t2
+
+color    shape
+red      round
+red      square
+red      triangle
+blue     round
+blue     square
+blue     triangle
+Green    round
+Green    square
+Green    triangle
+
+
+self join:  A self join is a join operation  where a table is joined to itself
+as if it were two tables
+
+employees
+   eid     ename     m_id
+   101    john        103
+   102    raj         103
+   103    priya       104
+   104    prasad      null
+
+    eid     ename     m_id
+   101    john        103
+   102    raj         103
+   103    priya       104
+   104    prasad      null
+
+   print ename with managers names
+
+   select t1.ename,t2.ename
+   from employees as t1
+   inner join
+   employees as t2
+   ON t1.m_id=t1.id
+
+ employees
+   eid  ename  department
+   1    john    sales
+   2    swathi  sales
+   3    rani    HR
+   4    Mike    sales
+
+
+   can you find pairs of same department
+  select t1.ename, t2.ename
+  from employees as t1
+  inner join
+  employees as t2
+  ON t1.department=t2.department and t1.eid<t2.eid
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
