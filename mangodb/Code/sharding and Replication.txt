@@ -1,0 +1,19 @@
+Replication:Replication involves maintaining multiple copies of data in different nodes to ensure high availability and durability.In MongoDB , we achieve it through replica sets.
+A replica Set consists of
+   Primary Node: it accepts writes and copies the data to secondary nodes
+   secondary Node:it is just a copy to read from primary and can become primary node if primary fails
+
+Sharding: it is used to distribute large amount of data across multiple servers or shards to improve scalability
+why do we need sharding?
+   i. Server might be loaded large amount of data
+   ii. read traffic of all types of users goes to single server
+   iii. write traffic always change single server
+
+data will be divided based on a value which is dicided based on shards space and cost called shard key
+
+Indexing: Indexing is used for performance and faster query retrival
+   db.collectionName.createIndex({fieldName:1})
+   Indexes are separated as
+    uniqueIndex(single Index): index for single fieldName
+    compondIndex:index for multiple fieldNames
+    text index: index for string field that can also be used for text search

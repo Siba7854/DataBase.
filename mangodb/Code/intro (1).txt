@@ -1,0 +1,26 @@
+MongoDB: 
+   Introduction: MongoDB is a NoSQL document-based , schema-less database that allows for flexible  and scalable data storage . It used JSON like structure called BSON(Binary serialized Object Notation).
+
+   key features:
+      Document - based: MongoDB storess the data in documents.
+      schema-less : MongoDB doesn't require a predefined schema(structure)
+      scalable : MongoDB is designed for horizontal scaling
+      High perfomance: Due to its flexibility and memory storage, it gives higher performance compared to Relational databases.
+
+  MongoDB is preferable to platforms where data is flexible, non structured. Eg: social media platforms
+
+  Terminologies :
+            SQL                    NoSQL
+         database   --            schema or database
+         table      --            collection
+         row/record --            documents
+         columns    --            fields
+
+How to download and install mongodb
+   we need to download mongodb-community-server and compass
+  compass is the GUI(graphical user Interface) tool which is used to perform MongoDB queries
+
+
+
+
+ 

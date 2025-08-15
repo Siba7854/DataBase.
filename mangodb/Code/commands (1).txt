@@ -1,0 +1,87 @@
+MongoDB Commands: 
+   In MongoDB, empty databases will not be show, we need atleast one collection in db to shown
+
+ i. show dbs;  -- used to show list of databases
+ ii. use databaseName; -- used to switch to any database
+ iii. db.createCollection('collectionName') -- it creates an empty collection and it uses collection to insert data
+ iv. db.collectionName.drop() -- it deletes complete collection
+
+ Inserting Documents:
+    Insert one document -- db.collectionName.insertOne({key1:value1,key2:value2...})
+    Insert Multiple documents -- db.collectionName.insertMany([{},{}....])
+
+we can also add the data directly at compass (add data--> insert a document) or add data--> import json or csv
+
+  Read all the data:
+     Read all documents -->db.collection.find()
+  Read data based on a specific condition:
+      db.collectionName.findOne({key:value});
+        it will find and retrieve only thr first document that matches the condition
+      db.collectionName.find({key:value});
+        it will find and retrieve all the documents that matches the condition
+
+Update the Data : we can also update the data using updateOne and updateMany methods
+     db.collectionName.updateOne(filter,updateLogic):
+         it is used to update the first one document that follows the filter
+     db.collectionName.updateMany(filter,updateLogic)"
+        it is used to update the all documents that matches the filter
+
+delete the Data: we can delete any document using deleteOne and deleteMany
+     db.collectionName.deleteOne(filter) : it will delete the first document with the filter
+     db.collectionName.deleteMany(filte): it will delete all the documents with the filter
+
+---------------------------------
+  Task:
+  -------------------------------
+  1. show all the databases available
+   show dbs;
+  
+  2. use the database "moviesDB"
+  use moviesDB;
+
+  3. create a collection  named "movies"
+  db.createCollection('movies')
+   
+Note: DB is actually created Here
+  4. show all the collections in moviesDB
+  db.showCollections
+
+  5. Insert one movie detail as a document in movies collection
+  db.movies.insertOne({name:"RRR",year:2023,status:"HIT"});
+
+  6. Insert multiple documents in movies collection
+  db.movies.insertMany([{name:"Salaar",year:2024,status:"HIT"},{name:"xyz",year:2023,status:"FLOP"},{name:"abc"}]);
+
+ 7. Read the first document whose status is "HIT"
+   db.movies.findOne({status:"HIT"})
+
+ 8. Read all the documents with status as "HIT"
+    db.movies.find({status:"HIT"})
+
+  9. Read all document of a collection
+    db.movies.find() or db.movies.find({})
+
+  10. Delete one document that contains year as "2023"
+   db.movies.deleteOne({year:2023})
+
+  11.Delete all the documents whose status is "HIT"
+   db.movies.deleteMany({status:"HIT"})
+
+  12. update one document status as "HIT" and OTT as "netlix" where year is 2023
+
+  db.movies.updateOne({year:2023},{$set:{status:"HIT"},$set:{OTT:"NETFLIX"}})
+
+  13. update status as "HIT" to all the documents where year is 2023
+  db.movies.updateMany({year:2023},{$set:{status:"HIT"}})
+
+  
+
+
+
+
+
+
+
+
+
+

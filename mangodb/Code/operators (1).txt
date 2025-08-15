@@ -1,0 +1,57 @@
+Operators in MongoDB: MongoDB provides various operators to perform Queries like updates, insertion, deletion or data retrieval.
+Most used operators are:
+  $eq -- checks for whether key is equal to specific value or not
+  $gt -- checks for whether key is greater than a specific value or not
+  $ne -- checks for whether field is not equal to specific value or not
+  $lt -- checks for less than
+  $gte -- checks for greater than or equals
+  $lte -- chekcs for less than or equals
+  $in  -- matches the value in given array
+  $nin -- matches the value in give array for not condition
+
+
+  $and -- it is used to match all conditions and return matched documents
+  $or  -- it return documents that matches either of conditions
+  $nor -- returns all documents that don't match the conditions
+  $not -- returns all documets that dont match condition
+
+  $set -- set the value of a field
+  $unset -- removes a field
+  $inc -- increments the value of field
+
+  $exists -- matches documets with a specific field
+
+  Tasks:
+   1. Find the products whose category is equal to 'electronics'
+   db.products.find({category:{$eq:"electronics"}})
+
+   2. Find the products whose price is greater than 200
+   db.products.find({price:{$gt:200}})
+
+   3. Find the products whose price is less than or equal to 150
+   db.products.find({price:{$lte:150}})
+
+   4. Find the products whose category is either 'electronics' or 'jewelery'
+   db.products.find({category:{$in:["electronics","jewelery"]}})
+
+   5. Find the products whose Price is between 100 and 200
+   db.products.find({$and:[{price:{$gte:100}},{price:{$lte:200}}]})
+
+   6. find the products whose price is either less than 100 or greater than 200
+   db.products.find({$or:[{price:{$lt:100}},{price:{$gt:200}}]})
+
+   7. find the products whose category is not electronics
+   db.products.find(category:{$not:{$eq:"electronics"}})
+
+   8. remove description field for products whose price is less than 100
+   db.products.updateMany({price:{$lt:100}},{$unset:{description:""}})
+
+   9.increase price by 50 for all electronics category products
+   db.products.updateMany({category:{$eq:"electronics"}},
+   {$inc:{price:50}})
+
+   10. find the products where field 'description' exists
+   db.products.find({description:{$exists:true}})
+
+
+   

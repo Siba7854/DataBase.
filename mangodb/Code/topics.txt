@@ -1,0 +1,9 @@
+MongoDB
+       Introduction and installation
+       basic commands
+       CRUD(insertOne,insertMany,find,findOne,UpdateOne,updateMany,deleteOne,deleteMany)
+       operators
+       Agreggation Pipeline
+       replication and sharding
+       MongoDB Atlas
+       indexing
